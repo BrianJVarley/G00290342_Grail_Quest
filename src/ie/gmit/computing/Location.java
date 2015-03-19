@@ -1,6 +1,10 @@
 package ie.gmit.computing;
 
-import java.util.*;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+
 
 public class Location implements Lookable{
 	private List<AbstractGameCharacter> observers = new ArrayList<AbstractGameCharacter>();
@@ -16,8 +20,7 @@ public class Location implements Lookable{
 	public void exit(GameChacter gc){
 		observers.remove(gc);
 	}
-	
-	
+
 	public void look() {
 		StringBuffer sb = new StringBuffer();
 		sb.append("-------- " + this.name + " -----------\n");
@@ -27,21 +30,11 @@ public class Location implements Lookable{
 		for (GameChacter gc : observers){
 			sb.append(gc.getName());
 		}
-		
 		//You also see objects....
-		
 		sb.append("\nVisible exits are: \n");
 		for (Exit e : exits){
 			sb.append(e.getDirection());
 		}		
 	}
-	
-	
-	
-	
-	
-	
-
-	
-	
+		
 }

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<network>
+  <locations>
+   <location>
+    <location name="Tiberius"/>
+    <location description="You are in the Kingdom of Tiberias at the start of your journey.."/>
+    <objects>
+      <object type = "sword" life = "-0.5"/>
+      <object type = "food" life = "+0.5"/>
+      <object type = "medicine" life = "+1.0"/>
+      <object type = "ale" life = "+0.2"/>
+      <object type = "shield" life = "+0.4"/>
+    </objects>
+    <character>
+      <character type = "Saracen" life = "10"/>
+      <character type = "Knights Hospitaller" life = "10"/>
+      <character type = "Knights Templar" life = "10"/>
+      <character type = "Principality of Antioch" life = "10"/>
+      <character type = "Order of Saint" life = "10"/>
+      <character type = "Lazarus" life = "10"/>
+      <character type = "Ayyubids" life = "10"/>
+    </character>
+    <exits>
+      <exit name="Jerusalem" direction="S"/>
+    </exits>
+   </location>
+   <location>
+    <location name="Jerusalem"/>
+    <location description="You are in the Kingdom of Jerusalem.."/>
+    <objects>
+      <object type = "sword" life = "-0.5"/>
+      <object type = "food" life = "+0.5"/>
+      <object type = "medicine" life = "+1.0"/>
+      <object type = "ale" life = "+0.2"/>
+      <object type = "shield" life = "+0.4"/>
+    </objects>
+    <character>
+      <character type = "Saracen" life = "10"/>
+      <character type = "Knights Hospitaller" life = "10"/>
+      <character type = "Knights Templar" life = "10"/>
+      <character type = "Principality of Antioch" life = "10"/>
+      <character type = "Order of Saint" life = "10"/>
+      <character type = "Lazarus" life = "10"/>
+      <character type = "Ayyubids" life = "10"/>
+    </character>
+    <exits>
+      <exit name="Lod" direction="W"/>
+    </exits>
+   </location>
+   <location>
+    <location name="Lod"/>
+
+    <location description="You are in the Kingdom of Lod.."/>
+    <objects>
+      <object type = "sword" life = "-0.5"/>
+      <object type = "food" life = "+0.5"/>
+      <object type = "medicine" life = "+1.0"/>
+      <object type = "ale" life = "+0.2"/>
+      <object type = "shield" life = "+0.4"/>
+    </objects>
+    <character>
+      <character type = "Saracen" life = "10"/>
+      <character type = "Knights Hospitaller" life = "10"/>
+      <character type = "Knights Templar" life = "10"/>
+      <character type = "Principality of Antioch" life = "10"/>
+      <character type = "Order of Saint" life = "10"/>
+      <character type = "Lazarus" life = "10"/>
+      <character type = "Ayyubids" life = "10"/>
+    </character>
+    <exits>
+      <exit name="Haifa" direction="N"/>
+    </exits>
+   </location>
+  </locations>
+  <edges>
+   <edge>
+    <edge direction="S" from = "Tiberius" to="Jerusalem" weight="10" danger="7"/> 
+   </edge>
+   <edge>
+    <edge direction="W" from = "Jerusalem" to="Lod" weight="8" danger="10"/> 
+   </edge>
+   <edge>
+    <edge direction="N" from = "Lod" to="Haifa" weight="23" danger="5"/> 
+   </edge>
+  </edges>
+  <game>
+   <characters>
+    <character>
+     <character type = "ie.gmit.computing.Saracen"/>
+     <character name = "Achmed"/>
+     <character weapon = "scimiter"/>
+     <character behaviour = "gmit.Beamsearch"/>
+     <character inventory = "Whiskey"/>
+     <character initial-location = "Hattin"/>
+    </character>
+    <character>
+     <character type = "ie.gmit.computing.KnightsHospitaller"/>
+     <character name = "Alex"/>
+     <character weapon = "sword"/>
+     <character behaviour = "gmit.Beamsearch"/>
+     <character inventory = "Wine"/>
+     <character initial-location = "Jerusalem"/>
+    </character>
+   </characters>
+  </game>
+</network>

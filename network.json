@@ -1,0 +1,269 @@
+{
+  "network": {
+    "locations": {
+      "location": [
+        {
+          "location": [
+            { "-name": "Tiberius" },
+            { "-description": "You are in the Kingdom of Tiberias at the start of your journey.." }
+          ],
+          "objects": {
+            "object": [
+              {
+                "-type": "sword",
+                "-life": "-0.5"
+              },
+              {
+                "-type": "food",
+                "-life": "+0.5"
+              },
+              {
+                "-type": "medicine",
+                "-life": "+1.0"
+              },
+              {
+                "-type": "ale",
+                "-life": "+0.2"
+              },
+              {
+                "-type": "shield",
+                "-life": "+0.4"
+              }
+            ]
+          },
+          "character": {
+            "character": [
+              {
+                "-type": "Saracen",
+                "-life": "10"
+              },
+              {
+                "-type": "Knights Hospitaller",
+                "-life": "10"
+              },
+              {
+                "-type": "Knights Templar",
+                "-life": "10"
+              },
+              {
+                "-type": "Principality of Antioch",
+                "-life": "10"
+              },
+              {
+                "-type": "Order of Saint",
+                "-life": "10"
+              },
+              {
+                "-type": "Lazarus",
+                "-life": "10"
+              },
+              {
+                "-type": "Ayyubids",
+                "-life": "10"
+              }
+            ]
+          },
+          "exits": {
+            "exit": {
+              "-name": "Jerusalem",
+              "-direction": "S"
+            }
+          }
+        },
+        {
+          "location": [
+            { "-name": "Jerusalem" },
+            { "-description": "You are in the Kingdom of Jerusalem.." }
+          ],
+          "objects": {
+            "object": [
+              {
+                "-type": "sword",
+                "-life": "-0.5"
+              },
+              {
+                "-type": "food",
+                "-life": "+0.5"
+              },
+              {
+                "-type": "medicine",
+                "-life": "+1.0"
+              },
+              {
+                "-type": "ale",
+                "-life": "+0.2"
+              },
+              {
+                "-type": "shield",
+                "-life": "+0.4"
+              }
+            ]
+          },
+          "character": {
+            "character": [
+              {
+                "-type": "Saracen",
+                "-life": "10"
+              },
+              {
+                "-type": "Knights Hospitaller",
+                "-life": "10"
+              },
+              {
+                "-type": "Knights Templar",
+                "-life": "10"
+              },
+              {
+                "-type": "Principality of Antioch",
+                "-life": "10"
+              },
+              {
+                "-type": "Order of Saint",
+                "-life": "10"
+              },
+              {
+                "-type": "Lazarus",
+                "-life": "10"
+              },
+              {
+                "-type": "Ayyubids",
+                "-life": "10"
+              }
+            ]
+          },
+          "exits": {
+            "exit": {
+              "-name": "Lod",
+              "-direction": "W"
+            }
+          }
+        },
+        {
+          "location": [
+            { "-name": "Lod" },
+            { "-description": "You are in the Kingdom of Lod.." }
+          ],
+          "objects": {
+            "object": [
+              {
+                "-type": "sword",
+                "-life": "-0.5"
+              },
+              {
+                "-type": "food",
+                "-life": "+0.5"
+              },
+              {
+                "-type": "medicine",
+                "-life": "+1.0"
+              },
+              {
+                "-type": "ale",
+                "-life": "+0.2"
+              },
+              {
+                "-type": "shield",
+                "-life": "+0.4"
+              }
+            ]
+          },
+          "character": {
+            "character": [
+              {
+                "-type": "Saracen",
+                "-life": "10"
+              },
+              {
+                "-type": "Knights Hospitaller",
+                "-life": "10"
+              },
+              {
+                "-type": "Knights Templar",
+                "-life": "10"
+              },
+              {
+                "-type": "Principality of Antioch",
+                "-life": "10"
+              },
+              {
+                "-type": "Order of Saint",
+                "-life": "10"
+              },
+              {
+                "-type": "Lazarus",
+                "-life": "10"
+              },
+              {
+                "-type": "Ayyubids",
+                "-life": "10"
+              }
+            ]
+          },
+          "exits": {
+            "exit": {
+              "-name": "Haifa",
+              "-direction": "N"
+            }
+          }
+        }
+      ]
+    },
+    "edges": {
+      "edge": [
+        {
+          "edge": {
+            "-direction": "S",
+            "-from": "Tiberius",
+            "-to": "Jerusalem",
+            "-weight": "10",
+            "-danger": "7"
+          }
+        },
+        {
+          "edge": {
+            "-direction": "W",
+            "-from": "Jerusalem",
+            "-to": "Lod",
+            "-weight": "8",
+            "-danger": "10"
+          }
+        },
+        {
+          "edge": {
+            "-direction": "N",
+            "-from": "Lod",
+            "-to": "Haifa",
+            "-weight": "23",
+            "-danger": "5"
+          }
+        }
+      ]
+    },
+    "game": {
+      "characters": {
+        "character": [
+          {
+            "character": [
+              { "-type": "ie.gmit.computing.Saracen" },
+              { "-name": "Achmed" },
+              { "-weapon": "scimiter" },
+              { "-behaviour": "gmit.Beamsearch" },
+              { "-inventory": "Whiskey" },
+              { "-initial-location": "Hattin" }
+            ]
+          },
+          {
+            "character": [
+              { "-type": "ie.gmit.computing.KnightsHospitaller" },
+              { "-name": "Alex" },
+              { "-weapon": "sword" },
+              { "-behaviour": "gmit.Beamsearch" },
+              { "-inventory": "Wine" },
+              { "-initial-location": "Jerusalem" }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
